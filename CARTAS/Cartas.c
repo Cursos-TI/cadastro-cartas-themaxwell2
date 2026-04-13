@@ -16,6 +16,8 @@ int main() {
   char cidade [20]; // Nome da cidade
   char resultado01 = 'A';
 
+  int escolha;
+
   unsigned int populacao; // Quantidade da populacao na cidade
   int Turisticos; // Numero de pontos turisticos!
 
@@ -158,42 +160,155 @@ int main() {
 printf("----- BATALHA DAS CARTAS ----- \n");
 printf("----- VENCE A CARTA QUE TIVER O VALOR MAIOR ----- \n");
 printf("\n");
-printf("----------------------------------SUPER PODER COMPARACAO---------------------------------- \n");
+
+
+//ESCOLHER COMPARACAO DAS CARTAS
+
+printf("O que você quer comparar? \n");
+printf("1 - SUPER PODER \n");
+printf("2 - POPULACAO \n");
+printf("3 - PONTOS TURISTICOS \n");
+printf("4 - AREA EM KMS \n");
+printf("5 - PIB \n");
+printf("6 - DENSIDADE POPULACIONAL \n");
+printf("7 - PIB PER CAPITA \n");      
+printf("Sua escolha: ");
+scanf("%d", &escolha);
+
+switch(escolha){
+  case 1:
+    // COMPARACAO SUPER PODER
+    printf("SUPER PODER %s: %.2f\n", cidade, superPoder01);
+    printf("SUPER PODER %s: %.2f\n", cidade2, superPoder02);
+
+      if (superPoder01 > superPoder02) {
+        printf("CIDADE 1 VENCEU! \n");
+      } else if (superPoder01 == superPoder02) {
+        printf("EMPATE! \n");
+      } else {
+        printf("CIDADE 2 VENCEU! \n");
+      }
+    break;
+  case 2:
+    // COMPARACAO POPULACAO
+    printf("POPULACAO %s: %d\n", cidade, populacao);
+    printf("POPULACAO %s: %d\n", cidade2, populacao2);
+
+      if (populacao > populacao2) {
+        printf("CIDADE 1 VENCEU! \n");
+      } else if (populacao == populacao2) {
+        printf("EMPATE! \n");
+      } else {
+        printf("CIDADE 2 VENCEU! \n");
+      }
+    break;
+  case 3:
+    // COMPARACAO PONTOS TURISTICOS
+    printf("PONTOS TURISTICOS %s: %d\n", cidade, Turisticos);
+    printf("PONTOS TURISTICOS %s: %d\n", cidade2, Turisticos2);
+
+      if(Turisticos > Turisticos2){
+        printf("CIDADE 1 VENCEU! \n");
+      } else if (Turisticos == Turisticos2) {
+        printf("EMPATE! \n");
+      } else {
+        printf("CIDADE 2 VENCEU! \n");
+      }
+    break;
+  case 4:
+    // COMPARACAO AREA EM KMS
+    printf("AREA EM KMS %s: %.2f\n", cidade, area);
+    printf("AREA EM KMS %s: %.2f\n", cidade2, area2);
+
+      if(area > area2) {
+        printf("CIDADE 1 VENCEU! \n");
+      } else if (area == area2)   {
+        printf("EMPATE! \n");
+      } else {
+        printf("CIDADE 2 VENCEU! \n");
+      }
+    break;
+  case 5:
+    // COMPARACAO PIB
+    printf("PIB %s: %.2f\n", cidade, PIB);
+    printf("PIB %s: %.2f\n", cidade2, PIB2);
+
+      if(PIB > PIB2) {
+        printf("CIDADE 1 VENCEU! \n");
+      } else if (PIB == PIB2) {
+        printf("EMPATE! \n");
+      } else {
+        printf("CIDADE 2 VENCEU! \n");
+      }
+    break;
+  case 6:
+    // COMPARACAO DENSIDADE POPULACIONAL
+    printf("DENSIDADE POPULACIONAL %s: %.2f\n", cidade, densidade);
+    printf("DENSIDADE POPULACIONAL %s: %.2f\n", cidade2, densidade2);
+
+      if(densidade < densidade2) {
+        printf("CIDADE 1 VENCEU! \n");
+      } else if (densidade == densidade2) {
+        printf("EMPATE! \n");
+      } else {
+        printf("CIDADE 2 VENCEU! \n");
+      }
+    break;
+  case 7:
+    // COMPARACAO PIB PER CAPITA
+    printf("PIB PER CAPITA %s: %.2f\n", cidade, perCapita);
+    printf("PIB PER CAPITA %s: %.2f\n", cidade2, perCapita2);
+
+      if(perCapita > perCapita2) {
+        printf("CIDADE 1 VENCEU! \n");
+      } else if (perCapita == perCapita2) {
+        printf("EMPATE! \n");
+      } else {
+        printf("CIDADE 2 VENCEU! \n");
+      }
+    break;
+  default:
+    printf("OPCAO INVALIDA! \n");
+    break;
+
+}
+}
+//printf("----------------------------------SUPER PODER COMPARACAO---------------------------------- \n");
 
 // IF SUPER PODER E DEMONSTRACAO DE QUAL CIDADE VENCEU
 
-printf("CIDADE 1: %s\n  | CIDADE 2: %s\n", cidade, cidade2);
-printf("SUPER PODER CIDADE 1: %.2f\n", superPoder01);
-printf("SUPER PODER CIDADE 2: %.2f\n", superPoder02);
-if(superPoder01 > superPoder02) {
-  printf("CIDADE 1 VENCEU! \n");
-} else if (superPoder02 > superPoder01) {
-  printf("CIDADE 2 VENCEU! \n");
-}
+//printf("CIDADE 1: %s\n  | CIDADE 2: %s\n", cidade, cidade2);
+//printf("SUPER PODER CIDADE 1: %.2f\n", superPoder01);
+//printf("SUPER PODER CIDADE 2: %.2f\n", superPoder02);
+//if(superPoder01 > superPoder02) {
+//  printf("CIDADE 1 VENCEU! \n");
+//} else {
+//  printf("CIDADE 2 VENCEU! \n");
+//}
 
-printf("----------------------------------POPULACAO COMPARACAO---------------------------------- \n");
+//printf("----------------------------------POPULACAO COMPARACAO---------------------------------- \n");
 
 // IF POPULACAO
 
-printf("POPULACAO CIDADE 1: %d  | POPULACAO CIDADE 2: %d\n", populacao, populacao2);
-if(populacao > populacao2) {
-  printf("CIDADE 1 VENCEU! \n");
-} else {
-  printf("CIDADE 2 VENCEU! \n");
-}
+//printf("POPULACAO CIDADE 1: %d  | POPULACAO CIDADE 2: %d\n", populacao, populacao2);
+//if(populacao > populacao2) {
+// printf("CIDADE 1 VENCEU! \n");
+//} else {
+//  printf("CIDADE 2 VENCEU! \n");
+//}
 
-printf("----------------------------------PONTOS TURISTICOS COMPARACAO---------------------------------- \n");
+//printf("----------------------------------PONTOS TURISTICOS COMPARACAO---------------------------------- \n");
 
 // PONTOS TURISTICOS
 
-printf("PONTOS TURISTICOS CIDADE 1: %d  | PONTOS TURISTICOS CIDADE 2: %d\n", Turisticos, Turisticos2);
-if(Turisticos > Turisticos2){
-  printf("CIDADE 1 VENCEU! \n");
-} else {
-  printf("CIDADE 2 VENCEU! \n");
-}
+//printf("PONTOS TURISTICOS CIDADE 1: %d  | PONTOS TURISTICOS CIDADE 2: %d\n", Turisticos, Turisticos2);
+//if(Turisticos > Turisticos2){
+//  printf("CIDADE 1 VENCEU! \n");
+//} else {
+//  printf("CIDADE 2 VENCEU! \n");
+//}
 
-printf("----------------------------------AREA EM KMS COMPARACAO---------------------------------- \n");
+/*printf("----------------------------------AREA EM KMS COMPARACAO---------------------------------- \n");
 
 // AREA EM KMS
 
@@ -239,7 +354,6 @@ if(perCapita > perCapita2) {
 } else {
   printf("CIDADE 2 VENCEU! \n");
 }
-}
 
 
 
@@ -251,4 +365,4 @@ if(perCapita > perCapita2) {
 //printf("DENSIDADE POPULACIONAL: %d\n", (1.0 - densidade) < (1.0 - densidade2));
 //printf("PIB PER CAPITA: %d\n", perCapita > perCapita2);
 //printf("SUPER PODER: %d", resultado01 > resultado02);
-//return 0; 
+//return 0; */
